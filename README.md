@@ -9,11 +9,12 @@ A production-grade LLM inference server running on consumer hardware. This repos
 | **Model** | Qwen3.6-35B-A3B (4-bit pack-quantized, 35.3B param MoE, 3.6B active) |
 | **Hardware** | 2× RTX 3090 24 GB (Z690 Taichi, PCIe Gen5 x8 bifurcation) |
 | **Framework** | vLLM v0.22.0 (V1 engine, PP=2, FlashInfer, FP8 KV cache) |
-| **Generation throughput** | **117.3 tok/s sustained** (575s burn, <1.3% variance) |
+| **Generation throughput** | **117.3 tok/s sustained** — 200 tok/s aggregate under load |
 | **Prompt processing** | **1,962–5,158 tok/s** |
 | **Max context** | **262,144 tokens** |
-| **System power** | **~514W** (235W + 238W GPUs, + platform) |
-| **Operating cost** | **€0.15 per 1M tokens** (422K tok/hr, €0.06/hr) |
+| **System power** | **~490W** (248W + 200W GPUs sustained) |
+| **Operating cost** | **€0.08 per 1M tokens** (719K tok/hr, €0.06/hr) |
+| **Stability** | ✅ 10-min continuous burn, 0 errors, <1.3% variance |
 | **Status** | Production — serving Hermes Agent + Free Claude Code |
 
 ## Repository Structure

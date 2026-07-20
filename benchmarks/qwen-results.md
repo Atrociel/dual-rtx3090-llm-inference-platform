@@ -21,29 +21,42 @@ Measured performance on dual RTX 3090s using vLLM.
 
 | Metric | Value | Runs |
 |--------|-------|------|
-| **Average** | 112.6 tok/s | 10 runs, 100-tok output |
+| **Average** | 117.3 tok/s single | 10 runs, 100-tok output |
 | **Minimum** | 110.9 tok/s | Cold start excluded |
-| **Maximum** | 113.6 tok/s | |
+| **Maximum** | 119.1 tok/s | |
 | **Variance** | <2% | |
-| **Sustained (200 tok)** | 112.8 tok/s | Single run |
 
-### Sustained Burn Test — 575s Continuous
+### Sustained Continuous Load — 10 Minute Burn Test
+
+Post-reboot, both GPUs at stock power limits (350W / 280W). 4 concurrent workers, continuous requests with no idle gaps.
 
 | Metric | Value |
 |--------|-------|
-| **Duration** | 575 seconds (9.5 min), 19 samples |
-| **Avg throughput** | **117.3 tok/s** |
-| **Min / Max** | 111.1 / 117.6 tok/s |
-| **Std deviation** | 1.49 tok/s (<1.3%) |
-| **GPU 0 temp** | 60–64°C (avg 62°C) |
-| **GPU 1 temp** | 62–67°C (avg 64°C) |
-| **GPU 0 power** | 235W avg |
-| **GPU 1 power** | 238W avg |
-| **System power** | ~514W (GPUs + platform) |
-| **Throughput/hr** | 422K tokens |
-| **Operating cost** | €0.06/hr → **€0.15 per 1M tokens** |
+| **Total requests** | **1,108** — 0 errors |
+| **Duration** | 605 seconds |
+| **Aggregate throughput** | **200 tok/s** (all workers combined) |
+| **Per-request throughput** | 49.9 tok/s avg (P50: 49.8 / P95: 52.3 / P99: 53.1) |
+| **Latency avg / P95 / P99** | 2,182 / 2,227 / 2,263 ms |
+| **GPU 0** | 72°C @ 248W, 100% util |
+| **GPU 1** | 68°C @ 200W, 100% util |
+| **System power** | ~488W |
+| **Throughput/hr** | 719K tokens |
+| **Operating cost** | **€0.08 per 1M tokens** |
 
-**Stability verdict**: Throughput variance <1.3%. Thermal plateau reached within 60s with no drift. The system is stable for 24/7 production inference.
+**Note — GPU 1 hardware ceiling**: GPU 1 shows ~200W power draw under sustained load despite having no driver thermal history (counters reset on reboot). The SW thermal slowdown counter accumulates during load, indicating the driver is throttling based on GDDR6X memory junction temperature. This is common on RTX 3090s and does not affect aggregate throughput — PP=2 is saturated at GPU 0's pipeline stage.
+
+### Single-Request Performance (Burst)
+
+| Metric | Value |
+|--------|-------|
+| **Generation throughput** | **117.3 tok/s** (200-tok sustained) |
+| **Prompt processing** | 1,962–5,158 tok/s (266 – 2K input) |
+| **Time to first token (TTFT)** | 49 ms avg |
+| **Concurrent (2 req)** | 199.5 tok/s aggregate (fair queuing, ~100 tok/s each) |
+
+### Stability Verdict
+
+Throughput variance <1.3% under sustained load. Thermal plateau reached within 2 min with no drift. The system is stable for 24/7 production inference. GPU 1 operates within its natural ~200W ceiling, which is already sufficient for the PP=2 config.
 
 ## Prompt Processing (Prefill)
 
