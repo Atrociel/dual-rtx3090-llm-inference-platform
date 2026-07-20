@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+*.so
+.python-version
+
+# Virtual environments
+venv/
+.venv/
+vllm/
+vllm-venv/
+fcc-env/
+myenv/
+
+# Environment files with secrets
+.env
+.env.*
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model files (symlinked from ~/models/)
+models/
+
+# Git credentials (never commit)
+.git-credentials
+
+# Screenshots with live data
+screenshots/*.png
+screenshots/*.jpg
+
+# Benchmark raw output
+benchmarks/*.txt
+
+# Logs
+*.log
