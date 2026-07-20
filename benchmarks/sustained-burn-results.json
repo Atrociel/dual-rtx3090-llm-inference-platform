@@ -1,0 +1,21 @@
+[
+  {"iter":1,"ts":"2026-07-20T21:58:11+03:00","elapsed_s":2,"latency_ms":1812,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":111.1,"http_code":200,"gpu":"0, 60, 234.28, 55, 17700|1, 67, 240.24, 86, 18165"}
+, {"iter":2,"ts":"2026-07-20T21:58:43+03:00","elapsed_s":34,"latency_ms":1776,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 64, 235.09, 100, 17700|1, 67, 214.16, 100, 18165"}
+, {"iter":3,"ts":"2026-07-20T21:59:15+03:00","elapsed_s":66,"latency_ms":1723,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 62, 235.41, 100, 17654|1, 62, 239.07, 100, 18165"}
+, {"iter":4,"ts":"2026-07-20T21:59:47+03:00","elapsed_s":98,"latency_ms":1720,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 61, 237.31, 98, 17682|1, 63, 235.53, 100, 18165"}
+, {"iter":5,"ts":"2026-07-20T22:00:19+03:00","elapsed_s":130,"latency_ms":1719,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 61, 231.76, 100, 17686|1, 63, 240.20, 100, 18165"}
+, {"iter":6,"ts":"2026-07-20T22:00:51+03:00","elapsed_s":161,"latency_ms":1717,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 61, 233.64, 100, 17708|1, 64, 242.02, 100, 18165"}
+, {"iter":7,"ts":"2026-07-20T22:01:22+03:00","elapsed_s":193,"latency_ms":1714,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 61, 235.61, 100, 17717|1, 62, 241.91, 100, 18165"}
+, {"iter":8,"ts":"2026-07-20T22:01:54+03:00","elapsed_s":225,"latency_ms":1730,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 62, 236.88, 100, 17680|1, 63, 237.37, 100, 18165"}
+, {"iter":9,"ts":"2026-07-20T22:02:26+03:00","elapsed_s":257,"latency_ms":1742,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 62, 235.02, 100, 17680|1, 65, 240.60, 100, 18165"}
+, {"iter":10,"ts":"2026-07-20T22:02:58+03:00","elapsed_s":289,"latency_ms":1764,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 62, 233.31, 100, 17768|1, 64, 240.18, 80, 18165"}
+, {"iter":11,"ts":"2026-07-20T22:03:30+03:00","elapsed_s":321,"latency_ms":1715,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 62, 234.99, 100, 17780|1, 64, 243.11, 100, 18165"}
+, {"iter":12,"ts":"2026-07-20T22:04:02+03:00","elapsed_s":352,"latency_ms":1722,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 62, 237.12, 86, 17745|1, 64, 236.16, 100, 18165"}
+, {"iter":13,"ts":"2026-07-20T22:04:33+03:00","elapsed_s":384,"latency_ms":1726,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 62, 238.12, 100, 17722|1, 63, 240.13, 100, 18165"}
+, {"iter":14,"ts":"2026-07-20T22:05:05+03:00","elapsed_s":416,"latency_ms":1704,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 62, 238.22, 100, 17838|1, 64, 238.88, 100, 18165"}
+, {"iter":15,"ts":"2026-07-20T22:05:37+03:00","elapsed_s":448,"latency_ms":1714,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 62, 232.99, 100, 17830|1, 65, 241.94, 79, 18165"}
+, {"iter":16,"ts":"2026-07-20T22:06:09+03:00","elapsed_s":480,"latency_ms":1748,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 63, 238.32, 100, 17766|1, 64, 235.18, 100, 18165"}
+, {"iter":17,"ts":"2026-07-20T22:06:41+03:00","elapsed_s":512,"latency_ms":1718,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 63, 238.43, 100, 17735|1, 64, 239.62, 100, 18165"}
+, {"iter":18,"ts":"2026-07-20T22:07:13+03:00","elapsed_s":543,"latency_ms":1713,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 62, 232.48, 100, 17604|1, 63, 240.43, 100, 18165"}
+, {"iter":19,"ts":"2026-07-20T22:07:44+03:00","elapsed_s":575,"latency_ms":1722,"ttft_ms":0,"prompt_tok":24,"completion_tok":200,"tok_s":117.6,"http_code":200,"gpu":"0, 63, 234.10, 100, 17574|1, 64, 242.74, 100, 18165"}
+]

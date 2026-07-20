@@ -27,7 +27,25 @@ Measured performance on dual RTX 3090s using vLLM.
 | **Variance** | <2% | |
 | **Sustained (200 tok)** | 112.8 tok/s | Single run |
 
-### Prompt Processing (Prefill)
+### Sustained Burn Test — 575s Continuous
+
+| Metric | Value |
+|--------|-------|
+| **Duration** | 575 seconds (9.5 min), 19 samples |
+| **Avg throughput** | **117.3 tok/s** |
+| **Min / Max** | 111.1 / 117.6 tok/s |
+| **Std deviation** | 1.49 tok/s (<1.3%) |
+| **GPU 0 temp** | 60–64°C (avg 62°C) |
+| **GPU 1 temp** | 62–67°C (avg 64°C) |
+| **GPU 0 power** | 235W avg |
+| **GPU 1 power** | 238W avg |
+| **System power** | ~514W (GPUs + platform) |
+| **Throughput/hr** | 422K tokens |
+| **Operating cost** | €0.06/hr → **€0.15 per 1M tokens** |
+
+**Stability verdict**: Throughput variance <1.3%. Thermal plateau reached within 60s with no drift. The system is stable for 24/7 production inference.
+
+## Prompt Processing (Prefill)
 
 | Input length | Tokens/s |
 |-------------|----------|
